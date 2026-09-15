@@ -1,4 +1,4 @@
-Level 1 — Basic Data Exploration
+***Level 1*** — Basic Data Exploration
 How many records are present in the dataset?
 How many unique orders are there?
 How many unique customers are there?
@@ -17,7 +17,7 @@ What are the different salespersons?
 
 
 
-Level 2 — Sales Analysis
+***Level 2*** — Sales Analysis
 What is the total sales amount?
 What is the total profit?
 What is the total quantity sold?
@@ -34,7 +34,7 @@ What percentage of orders were cancelled?
 What percentage of sales came from completed orders?
 
 
-Level 3 — Product Analysis
+***Level 3*** — Product Analysis
 Which product generated the highest sales?
 Which product generated the highest profit?
 Which product sold the highest quantity?
@@ -51,7 +51,7 @@ Which products might need pricing investigation?
 What percentage of total sales comes from the top 10 products?
 How concentrated are your sales among your top products?
 
-Level 4 — Category Analysis
+***Level 4*** — Category Analysis
 Which category generates the highest sales?
 Which category generates the highest profit?
 Which category sells the highest quantity?
@@ -66,7 +66,7 @@ Which category should receive more attention from management?
 Are there categories where high discounts appear to be reducing profitability?
 
 
-Level 5 — Brand Analysis
+***Level 5*** — Brand Analysis
 Which brand generates the highest sales?
 Which brand generates the highest profit?
 Which brand sells the highest quantity?
