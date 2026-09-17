@@ -1,5 +1,5 @@
 import pandas as pd 
-
+import matplotlib.pyplot as plt
 FILE='./sales_data.xlsx'
 
 df=pd.read_excel(FILE)
@@ -11,12 +11,8 @@ df=pd.read_excel(FILE)
 
 # What percentage of sales came from completed orders?
 
-PRODUCT_WITH_QTY:object={
-}
 
-for df['Product'] in product:
-    if PRODUCT_WITH_QTY.have(product):
-        PRODUCT_WITH_QTY[product]=PRODUCT_WITH_QTY[product]+1
-    else :
-          PRODUCT_WITH_QTY[product].insert(product,0)
-print(PRODUCT_WITH_QTY)
+
+
+
+

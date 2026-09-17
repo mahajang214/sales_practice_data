@@ -77,7 +77,7 @@ Which brands have low sales but high profit margins?
 What percentage of total sales comes from the top 5 brands?
 Are certain brands particularly strong in certain categories?
 
-Level 6 — Customer Analysis
+***Level 6*** — Customer Analysis
 Which customer has spent the most money?
 Which customer has generated the highest profit?
 Which customer has placed the most orders?
@@ -94,7 +94,7 @@ Which customers appear to be your most valuable customers?
 Which customers might be at risk of becoming inactive?
 
 
-Level 7 — Customer + Time Analysis
+***Level 7*** — Customer + Time Analysis
 When did each customer make their first purchase?
 When did each customer make their most recent purchase?
 How many days have passed since each customer's last purchase?
@@ -106,7 +106,7 @@ Which month acquired the most new customers?
 Which month generated the most repeat purchases?
 Are newer customers spending more or less than older customers?
 
-Level 8 — Time-Series Analysis
+***Level 8*** — Time-Series Analysis
 What is the total sales for each month?
 What is the total profit for each month?
 Which month had the highest sales?

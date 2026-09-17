@@ -73,3 +73,44 @@ for df[Product] in product:
     else :
           PRODUCT_WITH_QTY[product].insert(product,0)
 <!-- select sum(product) from sales_data group by product-->
+
+questions_l3_13=pd['Profit']<0
+print()
+
+<!-- OR -->
+
+questions_l3_13=df.groupby("Order_ID").filter(lambda x: x['Profit'].sum() < 0)
+print(questions_l3_13)
+
+
+
+question_l3_14=df.groupby("Order_ID").filter(lambda x : x['Profit'].sum() ==0 )[['Customer_Name','Profit']]
+print(question_l3_14)
+
+
+question_l3_21=df.groupby('Product')['Quantity']
+
+print(question_l3_21)
+
+
+question_l3_21=df.groupby('Product')['Quantity'].sum().nlargest(10)
+print(question_l3_21/len(df)*100)
+
+question_l3_21.plot.pie(figsize=(6, 6))
+
+# Display the plot
+plt.ylabel(question_l3_21.values) # Hides the default vertical column label
+plt.show()
+
+
+
+pie_chart=df.groupby('Product')['Quantity'].sum()
+# Generate pie chart
+pie_chart.plot.pie(figsize=(6, 6))
+
+# Display the plot
+plt.ylabel('') # Hides the default vertical column label
+plt.show()
+
+
+<!-- Level 4 -->
