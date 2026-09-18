@@ -1,6 +1,6 @@
 import pandas as pd 
 import matplotlib.pyplot as plt
-FILE='./sales_data.xlsx'
+FILE='../data/sales_data.xlsx'
 
 df=pd.read_excel(FILE)
 # question1=df['Order_ID'].count()
