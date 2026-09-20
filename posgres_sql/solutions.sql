@@ -66,5 +66,25 @@ select customer_ID, MAX(Order_Date) AS days_passed from sales_data
 where order_status='Completed' group by customer_ID order by customer_ID
 
 10. What is the average number of days between repeat purchases?
-select customer_ID, (  )
+SELECT AVG(gap_days) AS avg_days_between_repeat_purchases
+FROM (
+    SELECT Customer_ID,
+           Order_Date - LAG(Order_Date) OVER (PARTITION BY Customer_ID ORDER BY Order_Date) AS gap_days
+    FROM sales_data
+    WHERE Order_Status = 'Completed'
+) t
+WHERE gap_days IS NOT NULL;
 
+11. Which products contribute most of the total profit?
+SELECT Product, SUM(Profit) AS total_profit
+FROM sales_data
+WHERE Order_Status = 'Completed'
+GROUP BY Product
+ORDER BY total_profit DESC
+LIMIT 10;
+
+12. Which customers contribute most of the total revenue?
+select customer_name, sum(Sales_Amount) from sales_data
+WHERE Order_Status = 'Completed'
+group by customer_name 
+order by 
