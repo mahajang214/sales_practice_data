@@ -54,5 +54,17 @@ where order_status='Completed' order by Sales_Amount DESC limit 3
 
 
 7. What is each customer's first and most recent purchase date?
+select customer_ID, MIN(Order_Date), MAX(Order_Date) from sales_data
+where order_status='Completed' group by customer_ID order by customer_ID 
 
-select order_date, sum(customer_name) from sales_data group by order_date order by order_date ASC 
+8. How many days passed between a customer's first and latest purchase?
+select customer_ID, MIN(Order_Date) - MAX(Order_Date) AS days_passed from sales_data
+where order_status='Completed' group by customer_ID order by customer_ID 
+
+9. What is each customer's previous order date?
+select customer_ID, MAX(Order_Date) AS days_passed from sales_data
+where order_status='Completed' group by customer_ID order by customer_ID
+
+10. What is the average number of days between repeat purchases?
+select customer_ID, (  )
+
