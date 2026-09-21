@@ -84,7 +84,23 @@ ORDER BY total_profit DESC
 LIMIT 10;
 
 12. Which customers contribute most of the total revenue?
-select customer_name, sum(Sales_Amount) from sales_data
+SELECT Customer_ID, Customer_Name, SUM(Sales_Amount) AS Total_Revenue
+FROM sales_data
 WHERE Order_Status = 'Completed'
-group by customer_name 
-order by 
+GROUP BY Customer_ID, Customer_Name
+ORDER BY Total_Revenue DESC
+LIMIT 10;
+
+13. Which brands contribute most of the revenue within each category?
+select category, Brand, SUM(Sales_Amount) AS total_sales_generated from sales_data
+WHERE Order_Status = 'Completed'
+GROUP BY category, brand
+ORDER BY category, total_sales_generated DESC
+
+14. Which cities contribute most of the revenue within each state?
+select City, State, SUM(Sales_Amount) AS total_sales_generated from sales_data
+WHERE Order_Status = 'Completed'
+GROUP BY State, City
+ORDER BY State, total_sales_generated DESC
+
+-- 15. Which products are above their category's average profit margin?
